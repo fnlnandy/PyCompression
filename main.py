@@ -18,7 +18,7 @@ def try_decompressing_a_file() -> None:
         return
     
     decompressed_text = decompress_binary_data_into_text(compressed_file_content)
-#    decompressed_text = transition_encryption(decompressed_text)
+    decompressed_text = transition_encryption(decompressed_text)
     destination_file = input("Entrez le fichier de destination: ")
 
     try:
@@ -42,7 +42,7 @@ def try_compressing_a_file() -> None:
         print(f"Il y a eu une erreur durant la lécture du fichier '{file_path_to_compress}'.")
         return
 
-#    decompressed_file_content = transition_encryption(decompressed_file_content)
+    decompressed_file_content = transition_encryption(decompressed_file_content)
     compressedContent = compress_file_content(decompressed_file_content)
     destination_file = input("Entrez le fichier de destination: ")
     success_in_writing = compressedContent.write_into_file(destination_file)
