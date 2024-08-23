@@ -22,7 +22,7 @@ def try_decompressing_a_file() -> None:
     destination_file = input("Entrez le fichier de destination: ")
 
     try:
-        with open(destination_file, 'w') as file:
+        with open(destination_file, 'w', encoding='utf-8') as file:
             file.write(decompressed_text)
     except:
         print(f"Il y a eu une erreur durant l'écriture du fichier '{destination_file}'.")

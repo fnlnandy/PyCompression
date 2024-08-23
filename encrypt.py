@@ -51,7 +51,7 @@ def parse_file_content(file_path: str) -> str:
     parsed_file_content = ""
 
     try:
-        with open(file_path, "r") as file:
+        with open(file_path, "r", encoding='utf-8') as file:
             parsed_file_content = file.read()
         
         return parsed_file_content
